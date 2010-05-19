@@ -1,7 +1,7 @@
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "flow_pagination"
+    gemspec.name = "ochko-flow_pagination"
     gemspec.summary = "FlowPagination link renderer for WillPaginate"
     gemspec.description = "Replace paginate links with remote 'more' link"
     gemspec.email = "ochkoo@gmail.com"
