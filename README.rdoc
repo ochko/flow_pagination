@@ -21,13 +21,10 @@ I've created a category listing (index action) to give a basic example.
 Configure +WillPaginate+ and +FlowPagination+ gems (config/environment.rb):
 
   Rails::Initializer.run do |config|
-    [...]
-    config.gem 'mislav-will_paginate', :lib => 'will_paginate',
-        :source => 'http://gems.github.com'
 
-    config.gem 'mexpolk-flow_pagination', :lib => 'flow_pagination',
-        :source => 'http://gems.github.com'
-    [...]
+    config.gem 'mislav-will_paginate', :lib => 'will_paginate'
+    config.gem 'ochko-flow_pagination', :lib => 'flow_pagination'
+
   end
 
 To install these gems type the following rake task:
@@ -37,7 +34,7 @@ To install these gems type the following rake task:
 === Install It as a Plugin
 
   script/plugin install git://github.com/mislav/will_paginate.git
-  script/plugin install git://github.com/mexpolk/flow_pagination.git
+  script/plugin install git://github.com/ochko/flow_pagination.git
 
 == Usage
 
@@ -48,7 +45,7 @@ Enjoy!
 
 == License
 
-Copyright (c) 2009 Iván Torres
+Copyright (c) 2010 Ochirkhuyag.L
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
