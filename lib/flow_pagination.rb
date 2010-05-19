@@ -10,9 +10,7 @@ module FlowPagination
       if self.current_page < self.last_page
         flow_pagination = @template.button_to_remote(
             @template.t('flow_pagination.button', :default => 'More'),
-            :url => { :controller => @template.controller_name,
-              :action => @template.action_name,
-              :params => @template.params.merge!(:page => self.next_page)},
+            :url => url_for(self.next_page),
             :method => @template.request.request_method)
       end
 
