@@ -8,11 +8,17 @@ module FlowPagination
       flow_pagination = ''
 
       if self.current_page < self.last_page
-        flow_pagination = @template.link_to_remote(
+        if @options[:noajax]
+          flow_pagination = @template.link_to(
+            @template.t('flow_pagination.link', :default => 'more'),
+            url_for(self.next_page))
+        else
+          flow_pagination = @template.link_to_remote(
             @template.t('flow_pagination.link', :default => 'more'),
             {:url => url_for(self.next_page),
              :method => @template.request.request_method}.
               merge(ajax_options) )
+        end
       end
 
       @template.content_tag(:div, flow_pagination, :id => 'flow_pagination')
