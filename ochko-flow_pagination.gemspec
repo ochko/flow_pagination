@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ochko-flow_pagination}
-  s.version = "1.2.1"
+  s.version = "1.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ochirkhuyag.L"]
@@ -23,7 +23,8 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "init.rb",
-     "lib/flow_pagination.rb"
+     "lib/flow_pagination.rb",
+     "ochko-flow_pagination.gemspec"
   ]
   s.homepage = %q{http://github.com/ochko/flow_pagination}
   s.rdoc_options = ["--charset=UTF-8"]
