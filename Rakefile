@@ -1,10 +1,14 @@
-require 'echoe'
-
-Echoe.new('flow_pagination', '1.1') do |e|
-  e.description    = "FlowPagination link renderer plugin for Mislav's WillPaginate plugin (Twitter like pagination)."
-  e.url            = "http://github.com/mexpolk/flow_pagination"
-  e.author         = "Ivan Torres"
-  e.email          = "mexpolk@gmail.com"
-  e.ignore_pattern = ["tmp/*", "script/*"]
-  e.development_dependencies = []
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "flow_pagination"
+    gemspec.summary = "FlowPagination link renderer for WillPaginate"
+    gemspec.description = "Replace paginate links with remote 'more' link"
+    gemspec.email = "ochkoo@gmail.com"
+    gemspec.homepage = "http://github.com/ochko/flow_pagination"
+    gemspec.authors = ["Ochirkhuyag.L"]
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler -s http://gemcutter.org"
 end

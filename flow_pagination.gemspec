@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ochko-flow_pagination}
-  s.version = "1.2"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ochirkhuyag.L", "Ivan Torres"]
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Flow_pagination", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{flow_pagination}
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{FlowPagination link renderer plugin for Mislav's WillPaginate plugin (Twitter like pagination).}
 
   if s.respond_to? :specification_version then
