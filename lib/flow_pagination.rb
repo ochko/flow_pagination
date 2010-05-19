@@ -10,12 +10,17 @@ module FlowPagination
       if self.current_page < self.last_page
         flow_pagination = @template.link_to_remote(
             @template.t('flow_pagination.link', :default => 'more'),
-            :url => url_for(self.next_page),
-            :method => @template.request.request_method)
+            {:url => url_for(self.next_page),
+             :method => @template.request.request_method}.
+              merge(ajax_options) )
       end
 
       @template.content_tag(:div, flow_pagination, :id => 'flow_pagination')
+    end
 
+    def ajax_options
+      return @ajax_options if @ajax_options
+      @ajax_options = Hash[@options.select{ |k,v| [:loading, :loaded, :interactive, :success, :failure, :complete, :confirm, :condition, :before, :after, :submit, :with, :update, :position].include? k }]
     end
 
     protected
